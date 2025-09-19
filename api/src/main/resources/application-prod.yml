@@ -1,8 +1,0 @@
-employee:
-  api:
-    base-url: ${EMPLOYEE_API_URL:http://employee-service:8112/api/v1/employee}
-
-logging:
-  level:
-    com.reliaquest: INFO
-    root: WARN
