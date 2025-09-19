@@ -7,7 +7,7 @@ import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Positive;
 
 public record EmployeeInput(
-        @NotBlank String name,
-        @NotNull @Positive Integer salary,
-        @NotNull @Min(16) @Max(75) Integer age,
-        @NotBlank String title) {}
+    @NotBlank String name,
+    @NotNull @Positive Integer salary,
+    @NotNull @Min(16) @Max(75) Integer age,
+    @NotBlank String title) {}

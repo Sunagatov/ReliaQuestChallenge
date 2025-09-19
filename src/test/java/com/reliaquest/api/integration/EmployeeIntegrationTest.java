@@ -18,26 +18,27 @@ import org.springframework.test.context.TestPropertySource;
 @TestPropertySource(properties = "server.port=0")
 class EmployeeIntegrationTest {
 
-    @Autowired
-    private TestRestTemplate restTemplate;
+  @Autowired private TestRestTemplate restTemplate;
 
-    @Test
-    void getAllEmployees_ShouldReturnList() {
-        ResponseEntity<List<Employee>> response = restTemplate.exchange(
-                "/api/v1/employee", HttpMethod.GET, null, new ParameterizedTypeReference<List<Employee>>() {});
+  @Test
+  void getAllEmployees_ShouldReturnList() {
+    ResponseEntity<List<Employee>> response =
+        restTemplate.exchange(
+            "/api/v1/employee",
+            HttpMethod.GET,
+            null,
+            new ParameterizedTypeReference<List<Employee>>() {});
 
-        // This test will fail if mock server is not running
-        // but demonstrates the integration test structure
-        assertNotNull(response);
-    }
+    assertNotNull(response);
+  }
 
-    @Test
-    void createEmployee_ShouldReturnCreatedEmployee() {
-        EmployeeInput input = new EmployeeInput("Test Employee", 60000, 30, "Test Title");
+  @Test
+  void createEmployee_ShouldReturnCreatedEmployee() {
+    EmployeeInput input = new EmployeeInput("Test Employee", 60000, 30, "Test Title");
 
-        ResponseEntity<Employee> response = restTemplate.postForEntity("/api/v1/employee", input, Employee.class);
+    ResponseEntity<Employee> response =
+        restTemplate.postForEntity("/api/v1/employee", input, Employee.class);
 
-        // This test will fail if mock server is not running
-        assertNotNull(response);
-    }
+    assertNotNull(response);
+  }
 }
