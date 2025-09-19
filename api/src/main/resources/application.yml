@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: employee-api
+
+server:
+  port: 8111
+
+employee:
+  api:
+    base-url: http://localhost:8112/api/v1/employee
+    timeout: 5000
+    retry:
+      max-attempts: 3
+      delay: 1000
+
+logging:
+  level:
+    com.reliaquest: DEBUG
+    org.springframework.web.client: DEBUG
