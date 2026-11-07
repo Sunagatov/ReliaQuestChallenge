@@ -1,5 +1,11 @@
 # ReliaQuest Coding Challenge
 
+<p>
+  <a href="https://buymeacoffee.com/lucky_1uck">
+    <img src="https://img.shields.io/badge/Support_the_project-FFDD00?style=for-the-badge&amp;logo=buymeacoffee&amp;logoColor=black" alt="Support the project" width="260" height="40">
+  </a>
+</p>
+
 #### In this assessment you will be tasked with filling out the functionality of different methods that will be listed further down.
 
 These methods will require some level of API interactions with Mock Employee API at http://localhost:8112/api/v1/employee.
@@ -145,4 +151,17 @@ and style guidelines with every build.
 
 To resolve any errors, you must run **spotlessApply** task.
 `./gradlew spotlessApply`
+
+
+---
+
+## ☕ Support the project
+
+If this project helps you learn or inspires your own work, you can support its development.
+
+<p>
+  <a href="https://buymeacoffee.com/lucky_1uck">
+    <img src="https://img.shields.io/badge/Support_the_project-FFDD00?style=for-the-badge&amp;logo=buymeacoffee&amp;logoColor=black" alt="Support the project" width="260" height="40">
+  </a>
+</p>
 
